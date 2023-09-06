@@ -1,0 +1,88 @@
+Soal no 1: Cari nilai KPK dari 3 dan 4
+Kode :
+def kpk(a, b): 
+  if a > b:
+     terbesar = a 
+  else:
+    terbesar = b
+
+  while True:
+    if terbesar % a == 0 and terbesar % b == 0:
+       hasil = terbesar
+       break 
+    terbesar += 1
+
+  return hasil 
+
+a = 3
+b = 4
+ 
+print("KPK dari", a, "dan", b, "adalah", kpk(a, b))
+
+Soal no 2 : Fungsi untuk menukar posisi dua variabel x dan y, dengan kasus : 
+Ada 2 buah: manggis dan pisang. Manggis di piring 1, Pisang di piring 2. Piring 3 kosong.
+Kode :
+def menukar(x, y):
+ piring = [x, y, ""]
+ for i in range(len(piring)): 
+  piring[2] = x
+  piring[0] = y 
+  piring[1] = x 
+  piring[2] = ""
+
+  print("piring", i+1, "=", str(piring[i]))
+
+x = "manggis" 
+y = "pisang"
+
+print("piring 1 =", x) 
+print("piring 2 =", y) 
+print("piring 3 = ")
+ 
+print("\nHasil penukaran:") 
+menukar(x, y)
+
+Soal no 3 : Diketahui sebuah segitiga memiliki ukuran sebagai berikut:
+Alas 25
+Tinggi 30
+Hitung luas dari segitiga tersebut.
+Kode :
+def luas_segitiga(alas, tinggi):
+ return 0.5*alas*tinggi
+
+alas = 25
+tinggi = 30
+print("Alas =", alas, "\nTinggi =", tinggi, "\nLuas = ", luas_segitiga(alas, tinggi))
+
+Soal no 4 : Tentukan algoritma dan pseudocode luas jajar genjang
+(panjang = 5, tinggi = 3)
+Kode :
+def luas_jajargenjang(alas, tinggi):
+ return alas*tinggi
+
+alas = 5
+tinggi = 3
+print("Alas =", alas, "\nTinggi =", tinggi, "\nLuas = ", luas_jajargenjang(alas, tinggi))
+
+Soal no 5: Tentukan algoritma dan pseudocode volume tabung (jari-jari = 3, tinggi = 5)
+Kode :
+import math
+
+def volume_tabung(r, t):
+ return math.pi*r**2*t
+
+jari_jari = 3
+tinggi = 5
+print("Jari-jari =", jari_jari, "\nTinggi =", tinggi, "\nLuas = ", volume_tabung(jari_jari, tinggi))
+
+Soal no 6: Tentukan algoritma dan pseudocode volume kerucut (diameter = 5, tinggi = 4)
+Kode :
+import math
+
+def volume_kerucut(d, t):
+ r = d/2
+ return 1/3*math.pi*r**2*t
+
+diameter = 5
+tinggi = 4
+print("Diameter =", diameter, "\nTinggi =", tinggi, "\nVolume = ", volume_kerucut(diameter, tinggi))
