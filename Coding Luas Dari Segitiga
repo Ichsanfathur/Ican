@@ -1,0 +1,12 @@
+#def luas_segitiga (a,t):
+#return 1/2*a*t
+
+#Deklarasikan variabel alas dan tinggi
+alas = 25
+tinggi = 30
+
+#Hitung luas segitiga dengan rumus
+luas_segitiga = 1/2*alas*tinggi
+
+#Tampilan hasil luas
+print(luas_segitiga)
